@@ -1,0 +1,50 @@
+extends ../layout
+
+block content
+  h3.
+    #{title}
+  .row
+    form.col.s12(name='addblob',method='post',action='/admin')
+      .row
+        .col.s6
+          .input-field.col.s7
+            input#input_Id(type='text' name='_id')
+            label ID
+          .input-field.col.s7
+            input#inputNumber(type='number' name='number')
+            label Порядковый номер
+          .input-field.col.s7 
+            input#inputName(type='text' name='name')
+            label Название Автошколы
+          .input-field.col.s7
+            input#inputCategory(type='text' name='category')
+            label Категории
+          .input-field.col.s12
+            textarea#textareaDescription.materialize-textarea(type='text' name='description')
+            label Описание
+        .col.s6  
+          .input-field.col.s6
+            p Адреса(1-10):
+            input#inputAdress1(type='text' name='adress1' placeholder='1')
+            input#inputAdress2(type='text' name='adress2' placeholder='2')
+            input#inputAdress3(type='text' name='adress3' placeholder='3')
+            input#inputAdress4(type='text' name='adress4' placeholder='4')
+            input#inputAdress5(type='text' name='adress5' placeholder='5')         
+            input#inputAdress6(type='text' name='adress6' placeholder='6')         
+            input#inputAdress7(type='text' name='adress7' placeholder='7')         
+            input#inputAdress8(type='text' name='adress8' placeholder='8')         
+            input#inputAdress9(type='text' name='adress9' placeholder='9')         
+            input#inputAdress10(type='text' name='adress10' placeholder='10')
+          .input-field.col.s6
+            p Адреса(11-20):
+            input#inputAdress11(type='text' name='adress11' placeholder='11')
+            input#inputAdress12(type='text' name='adress12' placeholder='12')
+            input#inputAdress13(type='text' name='adress13' placeholder='13')
+            input#inputAdress14(type='text' name='adress14' placeholder='14')
+            input#inputAdress15(type='text' name='adress15' placeholder='15')
+            input#inputAdress16(type='text' name='adress16' placeholder='16')
+            input#inputAdress17(type='text' name='adress17' placeholder='17')
+            input#inputAdress18(type='text' name='adress18' placeholder='18')
+            input#inputAdress19(type='text' name='adress19' placeholder='19')
+            input#inputAdress20(type='text' name='adress20' placeholder='20')                         
+      button.waves-effect.waves-light.btn Добавить 

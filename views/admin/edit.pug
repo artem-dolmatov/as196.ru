@@ -1,0 +1,51 @@
+extends ../layout
+
+block content
+  h3.
+    #{school.name}
+  .row
+    form(action='/admin/'+ school._id +'/edit', method='post', name='updateblob', enctype='application/x-www-form-urlencoded')
+      .row
+        .col.s6
+          .input-field.col.s7
+            input#input_Id(type='text' value=school._id name='_id')
+            label ID
+          .input-field.col.s7
+            input#inputNumber(type='number' value=school.number name='number')
+            label Порядковый номер
+          .input-field.col.s7 
+            input#inputName(type='text' value=school.name name='name')
+            label Название Автошколы
+          .input-field.col.s7
+            input#inputCategory(type='text' value=school.category name='category')
+            label Категории
+          .input-field.col.s12
+            textarea#textareaDescription.materialize-textarea(type='text' name='description')
+            label Описание
+        .col.s6      
+          .input-field.col.s6
+            p Адреса(1-10):     
+            input#inputAdress1(type='text' value=school.adress1 name='adress1')  
+            input#inputAdress2(type='text' value=school.adress2 name='adress2')  
+            input#inputAdress3(type='text' value=school.adress3 name='adress3')  
+            input#inputAdress4(type='text' value=school.adress4 name='adress4')  
+            input#inputAdress5(type='text' value=school.adress5 name='adress5')  
+            input#inputAdress6(type='text' value=school.adress6 name='adress6')  
+            input#inputAdress7(type='text' value=school.adress7 name='adress7')  
+            input#inputAdress8(type='text' value=school.adress8 name='adress8')  
+            input#inputAdress9(type='text' value=school.adress10 name='adress9')  
+            input#inputAdress10(type='text' value=school.adress10 name='adress10')
+          .input-field.col.s6
+            p Адреса(11-20):      
+            input#inputAdress11(type='text' value=school.adress11 name='adress11')  
+            input#inputAdress12(type='text' value=school.adress12 name='adress12')  
+            input#inputAdress13(type='text' value=school.adress13 name='adress13')  
+            input#inputAdress14(type='text' value=school.adress14 name='adress14')  
+            input#inputAdress15(type='text' value=school.adress15 name='adress15')  
+            input#inputAdress16(type='text' value=school.adress16 name='adress16')  
+            input#inputAdress17(type='text' value=school.adress17 name='adress17')  
+            input#inputAdress18(type='text' value=school.adress18 name='adress18')  
+            input#inputAdress19(type='text' value=school.adress19 name='adress19')  
+            input#inputAdress20(type='text' value=school.adress20 name='adress20')  
+            input(type='hidden' value='PUT' name='_method')
+      button#btnSubmit.waves-effect.waves-light.btn(type='submit') Сохранить изменения

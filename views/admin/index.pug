@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+    h3.
+      #{title}
+    a(href='/admin/new')
+      button.waves-effect.waves-light.btn Добавить
+    br
+    br    
+    each school, i in schools
+      .school-page
+        .row
+          .col.s1.number-right                
+            =school.number
+          .col.s3            
+            =school.name
+          .col.s8
+            .right-btn
+              .inline-button          
+                a.pad(href='/admin/' + school._id) Показать
+              .inline-button              
+                a.pad(href='/admin/' + school._id + '/edit') Редактировать
+              .inline-button    
+                form(action='/admin/' + school._id + '/edit',method='post',enctype='application/x-www-form-urlencoded')
+                  input(type='hidden',value='DELETE',name='_method')
+                  button.material-icons(type='submit') delete
+              
+          
+            

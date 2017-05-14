@@ -1,0 +1,16 @@
+extends ../layout
+
+block nav
+  include ../include/nav
+block content
+  .row
+    ul.collection.with-header 
+      li.collection-header Все Автошколы Екатеринбурга на одном сайте
+  each school, i in schools
+    .row
+      .col.s1
+        =school.number
+      .col.s2
+        =school.name
+block footer
+  include ../include/footer              

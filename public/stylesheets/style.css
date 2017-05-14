@@ -1,0 +1,36 @@
+/*admin*/
+.inline-button {
+  display: inline-block;
+}
+.school-page {
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  margin: 0% 0.5% -1% 0.5%;
+}
+.number-right {
+  text-align: center;
+}
+.right-btn {
+  float: right;
+}
+.pad {
+  padding-right: 20%;
+}
+
+/*bg*/
+.bg {
+  background-image: url(../images/bg.jpg);
+}
+
+/*Header*/
+.head-text {
+  color: #fff;
+  background-color: black;
+  opacity: 0.6;
+  text-align: center;
+}
+
+/*Top*/
+.school-head {
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  margin: 0% 0.5% -1% 0.5%;
+}

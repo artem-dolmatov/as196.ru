@@ -1,0 +1,30 @@
+var mongoose = require('mongoose');
+var blobSchema = new mongoose.Schema({
+  _id: String,
+  number: Number,
+  name: String,
+  number: Number,
+  category: String,
+  description: String,
+  adress1: String,
+  adress2: String,
+  adress3: String,
+  adress4: String,
+  adress5: String,
+  adress6: String,
+  adress7: String,
+  adress8: String,
+  adress9: String,
+  adress10: String,
+  adress11: String,
+  adress12: String,
+  adress13: String,
+  adress14: String,
+  adress15: String,
+  adress16: String,
+  adress17: String,
+  adress18: String,
+  adress19: String,
+  adress20: String
+});
+mongoose.model('School', blobSchema);
