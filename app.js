@@ -15,9 +15,9 @@ var schools = require('./routes/schools');
 var app = express();
 
 //Раскоментировать на сервере
-//var listener = app.listen(80, function(){
-//  console.log('Listering on port ' + listener.address().port); //Listering on port 80
-//});
+var listener = app.listen(80, function(){
+  console.log('Listering on port ' + listener.address().port); //Listering on port 80
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

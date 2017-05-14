@@ -136,7 +136,7 @@ router.route('/:id')
         console.log('GET Retrieving ID: ' + school._id);
         res.format({
           html: function(){
-              res.render('admin/show', {
+              res.render('schools/show', {
                 "school" : school
               });
           },

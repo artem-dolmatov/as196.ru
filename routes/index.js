@@ -121,4 +121,8 @@ router.get('/pdd', function(req, res){
   res.render('pdd/index');
 });
 
+router.get('/contact', function(req, res){
+  res.render('contact');
+});
+
 module.exports = router;

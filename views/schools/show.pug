@@ -1,0 +1,55 @@
+extends ../layout
+
+block nav
+  include ../include/nav
+block header
+  include ../include/header  
+block content
+    .row
+      .col.l10.s12
+        a(href='/') Автошколы Екатеринбурга &#8594; Автошкола - #{school.number}) #{school.name}
+    .row
+      .col.l10.s12        
+        h4.
+          Автошкола #{school.number}) #{school.name}
+    .row
+      .col.l10.s12
+        ul.tabs
+          li.tab.col.s3
+            a(href='#main') Главная
+          li.tab.col.s3
+            a(href='#description') Описание
+      .col.s12#main
+        .row
+          .col.l3            
+            .img-logo
+              img(src='../images/logo/' + school._id + '.png' alt="Logo")
+          .col.l6
+            .adress-div
+              p.spravka Единая Справочная: 
+                a(href='tel:+7(932)321-26-94') +7(932)321-26-94
+              p Адреса:  
+              p #{school.adress1}  
+              p #{school.adress2}  
+              p #{school.adress3}  
+              p #{school.adress4}  
+              p #{school.adress5}  
+              p #{school.adress6}  
+              p #{school.adress7}  
+              p #{school.adress8}  
+              p #{school.adress9}  
+              p #{school.adress10}  
+              p #{school.adress11}  
+              p #{school.adress12}  
+              p #{school.adress13}  
+              p #{school.adress14}  
+              p #{school.adress15}  
+              p #{school.adress16}  
+              p #{school.adress17}  
+              p #{school.adress18}  
+              p #{school.adress19}  
+              p #{school.adress20}  
+      .col.l10.s12#description
+        p #{school.description}              
+block footer
+  include ../include/footer  
