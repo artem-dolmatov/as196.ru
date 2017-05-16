@@ -5,13 +5,78 @@
         h3.
           Подберем автошколу в удобном месте по лучшей цене!
   .row        
-    .col.s6
-    .col.s6
-      form(action="/" method="POST" role='form')
+    .col.l6
+    .col.l5.s12
+      form#contactform.form-head(action="/" method="POST" role='form')
+        .row
+          .col.l12.center
+            span Рассчет стоимости обучения
         .row
           .col.s3
             p Категория
           .col.s9
-            p
-              input#a.waves-effect.waves-light.btn(type='checkbox')
-              label(for='a') red
+            input#A.filled-in(type='checkbox' value='A' name='a') 
+            label(for='A')
+              span.span-btn A
+            input#B.filled-in(type='checkbox' value='B' name='b') 
+            label(for='B')
+              span.span-btn B
+            input#C.filled-in(type='checkbox' value='C' name='c') 
+            label(for='C')
+              span.span-btn C
+            input#D.filled-in(type='checkbox' value='D' name='d') 
+            label(for='D')
+              span.span-btn D
+            input#E.filled-in(type='checkbox' value='E' name='e') 
+            label(for='E')
+              span.span-btn E  
+        .row
+          .col.s3
+            p Район
+          .col.s9
+            input#center.filled-in(type='checkbox' value='Центр' name='center') 
+            label(for='center')
+              span.span-btn Центр
+            input#viz.filled-in(type='checkbox' value='ВИЗ' name='viz') 
+            label(for='viz')
+              span.span-btn ВИЗ
+            input#uralmash.filled-in(type='checkbox' value='Уралмаш' name='uralmash') 
+            label(for='uralmash')
+              span.span-btn Уралмаш
+            input#sort.filled-in(type='checkbox' value='ст. Сортировка' name='sort') 
+            label(for='sort')
+              span.span-btn ст. Сортировка
+            input#kirov.filled-in(type='checkbox' value='Кировский' name='kirov') 
+            label(for='kirov')
+              span.span-btn Кировский
+            input#chkalov.filled-in(type='checkbox' value='Чкаловский' name='chkalov') 
+            label(for='chkalov')
+              span.span-btn Чкаловский    
+        .row
+          .col.s3
+            p Тип Обучения
+          .col.s9
+            input#online.filled-in(type='checkbox' value='Онлайн' name='online') 
+            label(for='online')
+              span.span-btn Онлайн
+            input#group.filled-in(type='checkbox' value='Стандартное' name='group') 
+            label(for='group')
+              span.span-btn Стандартное    
+        .row
+          .col.s3
+            p Тип Трансмиссии
+          .col.s9
+            input#mkpp.filled-in(type='checkbox' value='Механическая' name='mkpp') 
+            label(for='mkpp')
+              span.span-btn Механическая
+            input#akpp.filled-in(type='checkbox' value='Автоматическая' name='akpp') 
+            label(for='akpp')
+              span.span-btn Автоматическая
+        .row
+          .col.s3
+            p Номер телефона
+          .col.s9
+            input(type='text' name='phone')
+        .row
+          .col.s12.center
+            button.waves-effect.waves-light.btn.blue(type='submit') Рассчитать                 

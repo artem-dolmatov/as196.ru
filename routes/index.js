@@ -48,64 +48,21 @@ router.route('/')
               }
         });
     })
-    //POST a new blob
-    .post(function(req, res) {
-        // Get values from POST request. These can be done through forms or REST calls. These rely on the "name" attributes for forms
-        var _id = req.body._id;
-        var name = req.body.name;
-        var number = req.body.number;
-        var category = req.body.category;
-        var description = req.body.description;
-        var adress1 = req.body.adress1;
-        var adress2 = req.body.adress2;
-        var adress3 = req.body.adress3;
-        var adress4 = req.body.adress4;
-        var adress5 = req.body.adress5;
-        //call the create function for our database
-        mongoose.model('School').create({
-            _id : _id,
-            name : name,
-            number : number,
-            category : category,
-            description : description,
-            adress1 : adress1,
-            adress2 : adress2,
-            adress3 : adress3,
-            adress4 : adress4,
-            adress5 : adress5
-        }, function (err, school) {
-              if (err) {
-                  res.send("There was a problem adding the information to the database.");
-              } else {
-                  //School has been created
-                  console.log('POST creating new blob: ' + school);
-                  res.format({
-                      //HTML response will set the location and redirect back to the home page. You could also create a 'success' page if that's your thing
-                    html: function(){
-                        // If it worked, set the header so the address bar doesn't still say /adduser
-                        res.location("admin");
-                        // And forward to success page
-                        res.redirect("/");
-                    },
-                    //JSON response will show the newly created blob
-                    json: function(){
-                        res.json(school);
-                    }
-                });
-              }
-        })
-    });
 
 router.post('/', function(req, res){
-  var api_key = 'key-5ad1c1ffab948dc79d0ca7609390c8c1';
-  var domain = 'sandbox590b0d34e0a14c06bd26236260de0fb4.mailgun.org';
+  var api_key = 'key-430a017b2d04af9af2d9cfd80e7a2c08';
+  var domain = 'sandboxc1a42f17212546f1b27b27d149b04546.mailgun.org';
   var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
 
   var data = {
-    from: 'Excited User <postmaster@sandbox590b0d34e0a14c06bd26236260de0fb4.mailgun.org>',
-    to: 'tmn.amd@gmail.com',
-    subject: req.body.Name,
-    html: req.body.body
+    from: 'as196.ru <postmaster@sandboxc1a42f17212546f1b27b27d149b04546.mailgun.org>',
+    to: 'tmn-as72@yandex.ru',
+    subject: 'Заявка',
+    html: "Категория: "+req.body.a+" "+req.body.b+" "+req.body.c+" "+req.body.d+" "+req.body.e+"<br /><br />"+
+    "Район: "+req.body.center+" "+req.body.viz+" "+req.body.uralmash+" "+req.body.sort+" "+req.body.kirov+" "+req.body.chkalov+"<br /><br />"+
+    "Тип обучения: "+req.body.online+" "+req.body.group+"<br /><br />"+
+    "Тип трансмиссии: "+req.body.mkpp+" "+req.body.akpp+"<br /><br />"+
+    "Номер телефона: "+req.body.phone
   };
 
   mailgun.messages().send(data, function (error, body) {
